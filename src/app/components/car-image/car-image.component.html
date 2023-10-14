@@ -1,0 +1,14 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>İmageId</th>
+            <th>CarId</th>
+            <th>İmageDate</th>
+        </tr>
+    </thead>
+    <tr  *ngFor="let image of images">
+        <td>{{image.id}}</td>
+        <td>{{image.carId}}</td>
+        <td>{{image.imageDate}}</td>
+    </tr>
+</table>
