@@ -12,6 +12,8 @@ import { NaviComponent } from './components/navi/navi.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CarImageComponent } from './components/car-image/car-image.component';
 import { CarDetailComponent } from './components/car-detail/car-detail.component';
+import { CarNameListComponent } from './components/car-name-list/car-name-list.component';
+
 
 @NgModule({
   declarations: [
@@ -24,6 +26,7 @@ import { CarDetailComponent } from './components/car-detail/car-detail.component
     NaviComponent,
     CarImageComponent,
     CarDetailComponent,
+    CarNameListComponent,
   ],
   imports: [
     BrowserModule,

@@ -29,4 +29,7 @@ return this.httpClient.get<ListResponseModel<Car>>(newPath);
     let newPath=this.apiUrl+"cars/getcardetailbycolorid?colorId="+colorId;
     return this.httpClient.get<ListResponseModel<CarDetail>>(newPath);
   }
+  getCarDetails():Observable<ListResponseModel<CarDetail>>{
+    return this.httpClient.get<ListResponseModel<CarDetail>>(this.apiUrl+"cars/getall");
+  }
 }

@@ -8,8 +8,8 @@ const routes: Routes = [
   {path:"cars",component:CarComponent},
   {path:"cars/brands/:brandId",component:CarComponent},
   {path:"cars/colors/:colorId",component:CarComponent},
-  {path:"cars/cardetails/:carId",component:CarDetailComponent}
-  
+  //{path:"cars/cardetails/:carId",component:CarDetailComponent},
+  {path:"cars/carnamelist/:carId",component:CarDetailComponent}
 ];
 
 @NgModule({
