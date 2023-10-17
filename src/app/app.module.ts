@@ -13,6 +13,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { CarImageComponent } from './components/car-image/car-image.component';
 import { CarDetailComponent } from './components/car-detail/car-detail.component';
 import { CarNameListComponent } from './components/car-name-list/car-name-list.component';
+import { CarfilterPipePipe } from './pipes/carfilter-pipe.pipe';
+import { BrandfilterPipePipe } from './pipes/brandfilter-pipe.pipe';
+import { ColorfilterPipePipe } from './pipes/colorfilter-pipe.pipe';
 
 
 @NgModule({
@@ -27,6 +30,9 @@ import { CarNameListComponent } from './components/car-name-list/car-name-list.c
     CarImageComponent,
     CarDetailComponent,
     CarNameListComponent,
+    CarfilterPipePipe,
+    BrandfilterPipePipe,
+    ColorfilterPipePipe,
   ],
   imports: [
     BrowserModule,

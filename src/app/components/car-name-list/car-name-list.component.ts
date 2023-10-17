@@ -10,8 +10,9 @@ import { CarNameListService } from 'src/app/services/car-name-list.service';
   styleUrls: ['./car-name-list.component.css']
 })
 export class CarNameListComponent implements OnInit {
-  carNameList:CarDetail[];
-  currentCarName:CarDetail;
+  carNameList:CarNameList[];
+  currentCarName:CarNameList;
+  filterText="";
   constructor(private carNameListService:CarNameListService){
   }
 ngOnInit(): void {
@@ -22,10 +23,10 @@ getCarNameList(){
  this.carNameList=response.data;
   });
 }
-setCurrentCarName(carName:CarDetail){
+setCurrentCarName(carName:CarNameList){
 this.currentCarName=carName;
 }
-getCurrentCarNameClass(carName:CarDetail){
+getCurrentCarNameClass(carName:CarNameList){
   if(carName==this.currentCarName){
     return "list-group-item active";
   }
