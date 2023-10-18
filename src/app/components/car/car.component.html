@@ -1,18 +1,44 @@
+<div class="mb-3">
+  <label for="filterText" class="form-label">Araba Ara</label>
+  <input
+    type="text"
+    [(ngModel)]="filterText"
+    class="form-control"
+    id="filterText"
+    placeholder="arama ifadesi giriniz"
+  />
+</div>
+<div *ngIf="filterText.length > 1" class="alert alert-success">
+  {{ filterText }} Aradınız
+</div>
+<label>Renk Seçiniz</label> 
+<select class="form-select" aria-label="Default select example" [(ngModel)]="colorFilter">
+  <option *ngFor="let color of colors" value="{{ color.colorId }}">
+    {{ color.colorName }}
+  </option>
+</select>
+<label>Marka Seçiniz</label>
+<select class="form-select" aria-label="Default select example" [(ngModel)]="brandFilter" >
+  <option *ngFor="let brand of brands" value="{{ brand.brandId }}">
+    {{ brand.brandName}}
+  </option>
+</select>
+<button type="button" class="btn btn-warning" (click)="getCarByBrandIdAndColorId(brandFilter,colorFilter)">Filtrele</button> <button type="button" class="btn btn-danger" (click)="clearFilter()">Filtreyi Kaldır</button>
 <table class="table">
-    <thead>
-        <tr>
-        <td>BrandName</td>
-        <td>ColorName</td>
-        <td>ModelYear</td>
-        <td>DailyPrice</td>
-        <td>Description</td>
-        </tr>
-    </thead>
-    <tr *ngFor="let carDetail of carDetails">
-        <td>{{carDetail.brandName}}</td>
-        <td>{{carDetail.colorName}}</td>
-        <td>{{carDetail.modelYear}}</td>
-        <td >{{carDetail.dailyPrice}}</td>
-        <td >{{carDetail.description}}</td>
+  <thead>
+    <tr>
+      <td>BrandName</td>
+      <td>ColorName</td>
+      <td>ModelYear</td>
+      <td>DailyPrice</td>
+      <td>Description</td>
     </tr>
+  </thead>
+  <tr *ngFor="let carDetail of carDetails | carfilterPipe : filterText">
+    <td>{{ carDetail.brandName }}</td>
+    <td>{{ carDetail.colorName }}</td>
+    <td>{{ carDetail.modelYear }}</td>
+    <td>{{ carDetail.dailyPrice }}</td>
+    <td>{{ carDetail.description }}</td>
+  </tr>
 </table>

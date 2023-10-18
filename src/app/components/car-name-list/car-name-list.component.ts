@@ -12,7 +12,6 @@ import { CarNameListService } from 'src/app/services/car-name-list.service';
 export class CarNameListComponent implements OnInit {
   carNameList:CarNameList[];
   currentCarName:CarNameList;
-  filterText="";
   constructor(private carNameListService:CarNameListService){
   }
 ngOnInit(): void {

@@ -15,7 +15,7 @@
         <td>{{carDetail.modelYear}}</td>
         <td >{{carDetail.dailyPrice}}</td>
         <td >{{carDetail.description}}</td>
-        <img  [src]="getImagePath(carDetail.imagePath)">
     </tr>
+    <img *ngFor="let image of carImages" [src]="getImagePath(image.imagePath) ">
 </table>
 
