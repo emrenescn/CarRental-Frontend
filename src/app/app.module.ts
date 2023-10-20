@@ -16,6 +16,8 @@ import { CarNameListComponent } from './components/car-name-list/car-name-list.c
 import { CarfilterPipePipe } from './pipes/carfilter-pipe.pipe';
 import { ColorfilterPipePipe } from './pipes/colorfilter-pipe.pipe';
 import { FormsModule } from '@angular/forms';
+import { PaymentComponent } from './components/payment/payment.component';
+import { ToastrModule } from 'ngx-toastr';
 
 
 @NgModule({
@@ -32,12 +34,14 @@ import { FormsModule } from '@angular/forms';
     CarNameListComponent,
     CarfilterPipePipe,
     ColorfilterPipePipe,
+    PaymentComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ToastrModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

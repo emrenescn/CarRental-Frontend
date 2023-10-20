@@ -16,6 +16,17 @@
         <td >{{carDetail.dailyPrice}}</td>
         <td >{{carDetail.description}}</td>
     </tr>
-    <img *ngFor="let image of carImages" [src]="getImagePath(image.imagePath) ">
+    <img *ngFor="let image of carImages" [src]="getImagePath(image.imagePath)">
+    <div class="form-group">
+        <label for="rentDate">Rent Date:</label>
+        <input type="date" class="form-control" [(ngModel)]="rentDate" name="rentDate" />
+    </div>
+    <div class="form-group">
+        <label for="returnDate">Return Date:</label>
+        <input type="date" class="form-control" [(ngModel)]="returnDate" name="returnDate" />
+    </div>
+    <button routerLink="/payments" type="button" class="btn btn-warning" >Rent</button>
+
+
 </table>
 

@@ -1,0 +1,41 @@
+<div class="container shadow mt-3 mb-2 main">
+    <div class="row">
+        <h1>Payment Screen</h1><hr><br>
+    </div>
+<div class="row">
+    <form>
+        <div class="row">
+            <div class="col-md-3 form-group">
+             <label>First Name</label>
+             <input type="text" class="form-control" id="firstName" placeholder="First Name" [(ngModel)]="firstName">
+            </div>
+            <div class="col-md-3 form-group">
+                <label>Last Name</label>
+                <input type="text" class="form-control" id="lastName" placeholder="Last Name" [(ngModel)]="lastName">
+             </div>
+             <div class="col-md-6 form-group">
+                <label>Card Number</label>
+                <input type="text" class="form-control" id="cardNumber" placeholder="Card Number" [(ngModel)]="cardNumber">
+               </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 form-group">
+             <label>Mount</label>
+             <input type="text" class="form-control"  id="mount" placeholder="Mount" [(ngModel)]="mount">
+            </div>
+            <div class="col-md-4 form-group">
+                <label>Year</label>
+                <input type="text" class="form-control"  id="year" placeholder="Year" [(ngModel)]="year">
+             </div>
+             <div class="col-md-4 form-group">
+                <label>CVV</label>
+                <input type="text" class="form-control"  id="CVV" placeholder="CVV" [(ngModel)]="cvv">
+               </div>
+        </div><br>
+        <div class="mb-4">
+            <button type="button" class="btn btn-primary">Pay</button>
+        </div>
+            
+    </form>
+</div>
+</div>
