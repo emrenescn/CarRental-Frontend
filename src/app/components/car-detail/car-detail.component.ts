@@ -12,8 +12,6 @@ import { CarDetailService } from 'src/app/services/car-detail.service';
 export class CarDetailComponent implements OnInit{
   carDetails:CarDetail[];
   carImages:CarImage[];
-  rentDate:Date;
-  returnDate:Date;
   constructor(private carDetailService:CarDetailService,private activatedRoute:ActivatedRoute){}
 ngOnInit(): void {
   this.activatedRoute.params.subscribe(params=>{

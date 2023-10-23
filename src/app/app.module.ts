@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,6 +19,8 @@ import { ColorfilterPipePipe } from './pipes/colorfilter-pipe.pipe';
 import { FormsModule } from '@angular/forms';
 import { PaymentComponent } from './components/payment/payment.component';
 import { ToastrModule } from 'ngx-toastr';
+import { ReactiveFormsModule } from '@angular/forms';
+import { RentalAddComponent } from './components/rental-add/rental-add.component';
 
 
 @NgModule({
@@ -35,13 +38,16 @@ import { ToastrModule } from 'ngx-toastr';
     CarfilterPipePipe,
     ColorfilterPipePipe,
     PaymentComponent,
+    RentalAddComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    ReactiveFormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

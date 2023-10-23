@@ -1,0 +1,42 @@
+<div class="content">
+    <div class="col-md-12">
+        <div class="mb-3">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="title">Rental Screen</h5>
+                </div>
+            </div>
+            <div class="card-body">
+             <form [formGroup]="rentalAddForm">
+                <div class="mb-3">
+                    <label for="rentDate">Rent Date</label>
+                    <div class="form-group">
+                   <input type="date" id="rentDate" formControlName="rentDate" placeholder="Rent Date" class="form-control"/>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="returnDate">Return Date</label>
+                    <div class="form-group">
+                   <input type="date" id="returnDate" formControlName="returnDate" placeholder="Return Date" class="form-control"/>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="customerId">Customer Number</label>
+                    <div class="form-group">
+                   <input type="number" id="customerId" formControlName="customerId" placeholder="Customer Number" class="form-control"/>
+                    </div>
+                </div>    
+                <div class="mb-3">
+                    <label for="carId">Car Number</label>
+                    <div class="form-group">
+                   <input type="number" id="carId" formControlName="carId" placeholder="Car Number" class="form-control"/>
+                    </div>
+                </div>
+             </form>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-fill btn-primary" (click)="add()" routerLink="/payments">Rent</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -9,15 +9,15 @@ import { ResponseModel } from '../models/responseModel';
   providedIn: 'root'
 })
 export class PaymentService {
- apiUrl="http://localhost:34798/api/payments/";
+ apiUrl="http://localhost:34798/api/";
   constructor(private httpClient:HttpClient) {
    }
   getPayments():Observable<ListResponseModel<Payment>>{
-    let newPath=this.apiUrl+"getall";
-  return this.httpClient.get<ListResponseModel<Payment>>(this.apiUrl);
+    let newPath=this.apiUrl+"payments/getall";
+  return this.httpClient.get<ListResponseModel<Payment>>(newPath);
   } 
   pay(payment:Payment):Observable<ResponseModel>{
-   let newPath=this.apiUrl+"add";
+    let newPath=this.apiUrl+"payments/add";
    return this.httpClient.post<ResponseModel>(newPath,payment);
   }
 }

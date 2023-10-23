@@ -1,41 +1,60 @@
-<div class="container shadow mt-3 mb-2 main">
-    <div class="row">
-        <h1>Payment Screen</h1><hr><br>
+<div class="content">
+    <div class="col-md-12">
+        <div class="mb-3">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="title">Payment Screen</h5>
+                </div>
+            </div>
+            <div class="card-body">
+             <form [formGroup]="paymentForm">
+                <div class="mb-3">
+                    <label for="firstName">First Name</label>
+                    <div class="form-group">
+                   <input type="text" id="firstName" formControlName="firstName" placeholder="First Name" class="form-control"/>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="lastName">Last Name</label>
+                    <div class="form-group">
+                   <input type="text" id="lastName" formControlName="lastName" placeholder="Last Name" class="form-control"/>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="customerId">Customer Number</label>
+                    <div class="form-group">
+                   <input type="number" id="customerId" formControlName="customerId" placeholder="Customer Number" class="form-control"/>
+                    </div>
+                </div>    
+                <div class="mb-3">
+                    <label for="cardNumber">Card Number</label>
+                    <div class="form-group">
+                   <input type="text" id="cardNumber" formControlName="cardNumber" placeholder="Card Number" class="form-control"/>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="cvv">CVV</label>
+                    <div class="form-group">
+                   <input type="number" id="cvv" formControlName="cvv" placeholder="CVV" class="form-control"/>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="mount">Mount</label>
+                    <div class="form-group">
+                   <input type="number" id="mount" formControlName="mount" placeholder="Mount" class="form-control"/>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="year">Year</label>
+                    <div class="form-group">
+                   <input type="number" id="year" formControlName="year" placeholder="Year" class="form-control"/>
+                    </div>
+                </div>
+             </form>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-fill btn-primary" (click)="pay()">Pay</button>
+            </div>
+        </div>
     </div>
-<div class="row">
-    <form>
-        <div class="row">
-            <div class="col-md-3 form-group">
-             <label>First Name</label>
-             <input type="text" class="form-control" id="firstName" placeholder="First Name" [(ngModel)]="firstName">
-            </div>
-            <div class="col-md-3 form-group">
-                <label>Last Name</label>
-                <input type="text" class="form-control" id="lastName" placeholder="Last Name" [(ngModel)]="lastName">
-             </div>
-             <div class="col-md-6 form-group">
-                <label>Card Number</label>
-                <input type="text" class="form-control" id="cardNumber" placeholder="Card Number" [(ngModel)]="cardNumber">
-               </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4 form-group">
-             <label>Mount</label>
-             <input type="text" class="form-control"  id="mount" placeholder="Mount" [(ngModel)]="mount">
-            </div>
-            <div class="col-md-4 form-group">
-                <label>Year</label>
-                <input type="text" class="form-control"  id="year" placeholder="Year" [(ngModel)]="year">
-             </div>
-             <div class="col-md-4 form-group">
-                <label>CVV</label>
-                <input type="text" class="form-control"  id="CVV" placeholder="CVV" [(ngModel)]="cvv">
-               </div>
-        </div><br>
-        <div class="mb-4">
-            <button type="button" class="btn btn-primary">Pay</button>
-        </div>
-            
-    </form>
-</div>
 </div>
