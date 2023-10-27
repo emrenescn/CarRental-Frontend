@@ -2,5 +2,6 @@
     <li routerLink="/cars" [class]="getAllCarNameClass()"><b>CarName</b></li>
    <li [class]="getCurrentCarNameClass(carName)"
     (click)="setCurrentCarName(carName)"
-    routerLink="cars/carnamelist/{{carName.carId}}" *ngFor="let carName of carNameList">{{carName.brandName}} {{carName.description}}</li>
+    routerLink="cars/carnamelist/{{carName.carId}}"
+     *ngFor="let carName of carNameList">{{carName.brandName}} {{carName.description}}</li>
   </ul>

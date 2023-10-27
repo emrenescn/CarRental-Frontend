@@ -17,8 +17,7 @@
         <td >{{carDetail.description}}</td>
     </tr>
     <img *ngFor="let image of carImages" [src]="getImagePath(image.imagePath)">
-    <button routerLink="/rents" type="button" class="btn btn-warning">Rent</button>
-
-
+    <button routerLink="/rentals/add" type="button" class="btn btn-warning">Rent</button>
+    <button routerLink="/rentals/delete" type="button" class="btn btn-danger">Delete</button>
 </table>
 

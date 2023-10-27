@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { ListResponseModel } from '../models/listResponseModel';
 import { Payment } from '../models/payment';
 import { ResponseModel } from '../models/responseModel';
+import { SingleResponseModel } from '../models/singleResponseModel';
 
 @Injectable({
   providedIn: 'root'
@@ -16,8 +17,8 @@ export class PaymentService {
     let newPath=this.apiUrl+"payments/getall";
   return this.httpClient.get<ListResponseModel<Payment>>(newPath);
   } 
-  pay(payment:Payment):Observable<ResponseModel>{
+  pay(payment:Payment):Observable<SingleResponseModel<Payment>>{
     let newPath=this.apiUrl+"payments/add";
-   return this.httpClient.post<ResponseModel>(newPath,payment);
+   return this.httpClient.post<SingleResponseModel<Payment>>(newPath,payment);
   }
 }

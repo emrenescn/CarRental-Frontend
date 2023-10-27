@@ -5,3 +5,7 @@
    *ngFor="let brand of brands"
     [class]="getCurrentBrandClass(brand)">{{brand.brandName}}</li>
 </ul>
+<button type="button" class="btn btn-primary" routerLink="/brands/add">Add</button>
+<button type="button" class="btn btn-success" routerLink="/brands/update">Update</button>
+<button type="button" class="btn btn-danger" routerLink="/brands/delete">Delete</button>
+

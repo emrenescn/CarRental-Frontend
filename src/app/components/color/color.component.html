@@ -9,3 +9,7 @@
   <li routerLink="/cars" [class]="getAllColorClass()"><b>Colors</b></li>
   <li routerLink="/cars/colors/{{color.colorId}}" (click)="setCurrentColor(color)" *ngFor="let color of colors |colorfilterPipe:filterText" [class]="getCurrentColorClass(color)">{{color.colorName}}</li>
 </ul>
+<button type="button" class="btn btn-primary" routerLink="/colors/add">Add</button>
+<button type="button" class="btn btn-success" routerLink="/colors/update">Update</button>
+<button type="button" class="btn btn-danger" routerLink="/colors/delete">Delete</button>
+
