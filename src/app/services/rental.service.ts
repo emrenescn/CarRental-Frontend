@@ -22,7 +22,7 @@ export class RentalService {
 return this.httpClient.get<ListResponseModel<RentDetail>>(this.apiUrl+"getrentaldetails");
   }
   add(rental:Rental):Observable<SingleResponseModel<Rental>>{
-  return this.httpClient.post<SingleResponseModel<Rental>>(this.apiUrl+"rulesforadding",rental);
+  return this.httpClient.post<SingleResponseModel<Rental>>(this.apiUrl+"add",rental);
   }
   delete(rental:Rental):Observable<SingleResponseModel<Rental>>{
     let newPath=this.apiUrl+"delete";

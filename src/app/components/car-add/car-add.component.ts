@@ -21,7 +21,8 @@ brandId:["",Validators.required],
 colorId:["",Validators.required],
 modelYear:["",Validators.required],
 dailyPrice:["",Validators.required],
-description:["",Validators.required]
+description:["",Validators.required],
+carFindeks:["",Validators.required]
 });
 }
 add(){
