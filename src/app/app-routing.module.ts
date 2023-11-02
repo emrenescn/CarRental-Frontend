@@ -17,6 +17,7 @@ import { RentalDeleteComponent } from './components/rental-delete/rental-delete.
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginGuard } from './guards/login.guard';
+import { ProfileComponent } from './components/profile/profile.component';
 
 
 const routes: Routes = [
@@ -38,7 +39,8 @@ const routes: Routes = [
   {path:"colors/update",component:ColorUpdateComponent},
   {path:"colors/delete",component:ColorDeleteComponent},
   {path:"login",component:LoginComponent},
-  {path:"register",component:RegisterComponent}
+  {path:"register",component:RegisterComponent},
+  {path:"profile",component:ProfileComponent}
 ];
 
 @NgModule({

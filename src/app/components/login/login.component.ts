@@ -26,6 +26,7 @@ login(){
     this.authService.login(loginModel).subscribe(response=>{
       this.toastrService.success(response.messsage);
       localStorage.setItem("token",response.data.token);
+      console.log(localStorage.getItem("token"));
     },repsonseError=>{
       this.toastrService.error(repsonseError.error);
     });

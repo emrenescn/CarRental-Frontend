@@ -1,0 +1,80 @@
+<div class="content">
+    <div class="col-md-12">
+        <div class="mb-3">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="title">Password Update</h5>
+                </div>
+            </div>
+            <div class="card-body">
+             <form [formGroup]="passwordForm">
+                <div class="mb-3">
+                    <label for="id">User Id</label>
+                    <div class="form-group">
+                   <input type="number" id="id" formControlName="id" placeholder="User Id" class="form-control"/>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="password">Password</label>
+                    <div class="form-group">
+                   <input type="password" id="password" formControlName="oldPassword" placeholder="Password" class="form-control"/>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="newPassword">New Password</label>
+                    <div class="form-group">
+                   <input type="password" id="newPassword" formControlName="newPassword" placeholder="New Password" class="form-control"/>
+                    </div>
+                </div>    
+                <div class="mb-3">
+                    <label for="repeatPassword">Repeat Password</label>
+                    <div class="form-group">
+                   <input type="password" id="repeatPassword" formControlName="repeatPassword" placeholder="Repeat Password" class="form-control"/>
+                    </div>
+                </div>
+             </form>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-fill btn-success" (click)="updatePassword()">Update</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content">
+    <div class="col-md-12">
+<div class="mb-3">
+    <div class="card">
+        <div class="card-header">
+            <h5 class="title">Name Update</h5>
+        </div>
+    </div>
+    <div class="card-body">
+     <form [formGroup]="userNameForm">
+        <div class="mb-3">
+            <label for="id">User Id</label>
+            <div class="form-group">
+           <input type="number" id="id" formControlName="id" placeholder="User Id" class="form-control"/>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="firstName">First Name</label>
+            <div class="form-group">
+           <input type="text" id="firstName" formControlName="firstName" placeholder="First Name" class="form-control"/>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="lastName">Last Name</label>
+            <div class="form-group">
+           <input type="text" id="lastName" formControlName="lastName" placeholder="Last Name" class="form-control"/>
+            </div>
+        </div>    
+     </form>
+    </div>
+    <div class="card-footer">
+        <button class="btn btn-fill btn-danger" (click)="updateName()">Update</button>
+    </div>
+</div>
+</div>
+</div>
+
+

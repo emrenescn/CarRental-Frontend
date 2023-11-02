@@ -34,6 +34,11 @@ import { RentalDeleteComponent } from './components/rental-delete/rental-delete.
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
+import { ProfileComponent } from './components/profile/profile.component';
+import { JWT_OPTIONS, JwtHelperService,JwtModule } from '@auth0/angular-jwt';
+export function tokenGetter() {
+  return localStorage.getItem("token");
+}
 
 
 @NgModule({
@@ -64,6 +69,7 @@ import { AuthInterceptor } from './interceptors/auth.interceptor';
     RentalDeleteComponent,
     LoginComponent,
     RegisterComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,
@@ -72,9 +78,17 @@ import { AuthInterceptor } from './interceptors/auth.interceptor';
     FormsModule,
     ToastrModule.forRoot(),
     ReactiveFormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: tokenGetter, 
+        allowedDomains: ['http://localhost:4200/'],
+      },
+    }),
+    
   ],
   providers: [{provide: HTTP_INTERCEPTORS,useClass:AuthInterceptor,multi:true}],
+  
   bootstrap: [AppComponent]
 })
 export class AppModule { }
